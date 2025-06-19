@@ -290,7 +290,7 @@ p.section-subtitle {
   text-align: center;
   font-size: clamp(26px * var(--coefficient), 26 * 100vw / var(--device-width), 26px);
   font-weight: 300;
-  opacity: 0.8;
+  color: #CFCFCF;
 }
 
 input:not([type=submit]) {

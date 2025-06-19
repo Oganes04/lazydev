@@ -148,56 +148,74 @@ if (document.querySelectorAll('.reviewsSwiper').length) {
 }
 
 
+//========================== Реализация плавного скролла ====================
+const lenis = new Lenis({
+  autoRaf: true,
+  lerp: 0.1,
+  duration: 1.2,
+  wheelMultiplier: 1,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  
+  anchors: {
+      offset: 0,
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  }
+});
+
 
 //=================== Скролл анимации ============
 
-// function animateOnScroll() {
-//     $(".pre-hidden").each(function () {
-//         const elementTop = $(this).offset().top;
-//         const windowBottom = $(window).scrollTop() + $(window).height();
-
-//         if (elementTop < windowBottom - 50) {
-//             const delay = parseInt($(this).data("delay")) || 0;
-//             $(this)
-//                 .css("transition-delay", delay + "ms")
-//                 .removeClass("pre-hidden");
-//         }
-//     });
-// }
-
-//   // При прокрутке
-//   $(window).on("scroll", animateOnScroll);
-
 function animateOnScroll() {
-    const windowTop = $(window).scrollTop();
-    const windowBottom = windowTop + $(window).height();
+    $(".pre-hidden").each(function () {
+        const elementTop = $(this).offset().top;
+        const windowBottom = $(window).scrollTop() + $(window).height();
 
-    $(".pre-hidden, .animated-element").each(function () {
-        const element = $(this);
-        const elementTop = element.offset().top;
-        const elementBottom = elementTop + element.outerHeight();
-
-        // Проверяем, находится ли элемент в видимой области с запасом 50px
-        const isInView = elementBottom > windowTop + 75 && elementTop < windowBottom - 200;
-
-        if (isInView && element.hasClass("pre-hidden")) {
-            // Элемент появился в области видимости - анимируем его
-            const delay = parseInt(element.data("delay")) || 0;
-            element
+        if (elementTop < windowBottom - 50) {
+            const delay = parseInt($(this).data("delay")) || 0;
+            $(this)
                 .css("transition-delay", delay + "ms")
-                .removeClass("pre-hidden")
-                .addClass("animated-element");
-        } else if (!isInView && element.hasClass("animated-element")) {
-            // Элемент вышел из области видимости - возвращаем в исходное состояние
-            element
-                .css("transition-delay", "0ms")
-                .addClass("pre-hidden")
-                .removeClass("animated-element");
+                .removeClass("pre-hidden");
         }
     });
 }
 
-// При прокрутке
-$(window).on("scroll", animateOnScroll);
-// Также вызываем при загрузке страницы
-$(document).ready(animateOnScroll);
+  // При прокрутке
+  $(window).on("scroll", animateOnScroll);
+
+
+
+
+// function animateOnScroll() {
+//     const windowTop = $(window).scrollTop();
+//     const windowBottom = windowTop + $(window).height();
+
+//     $(".pre-hidden, .animated-element").each(function () {
+//         const element = $(this);
+//         const elementTop = element.offset().top;
+//         const elementBottom = elementTop + element.outerHeight();
+
+//         // Проверяем, находится ли элемент в видимой области с запасом 50px
+//         const isInView = elementBottom > windowTop + 75 && elementTop < windowBottom - 200;
+
+//         if (isInView && element.hasClass("pre-hidden")) {
+//             // Элемент появился в области видимости - анимируем его
+//             const delay = parseInt(element.data("delay")) || 0;
+//             element
+//                 .css("transition-delay", delay + "ms")
+//                 .removeClass("pre-hidden")
+//                 .addClass("animated-element");
+//         } else if (!isInView && element.hasClass("animated-element")) {
+//             // Элемент вышел из области видимости - возвращаем в исходное состояние
+//             element
+//                 .css("transition-delay", "0ms")
+//                 .addClass("pre-hidden")
+//                 .removeClass("animated-element");
+//         }
+//     });
+// }
+
+// // При прокрутке
+// $(window).on("scroll", animateOnScroll);
+// // Также вызываем при загрузке страницы
+// $(document).ready(animateOnScroll);
