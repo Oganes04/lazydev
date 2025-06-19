@@ -178,7 +178,7 @@ function animateOnScroll() {
         const elementBottom = elementTop + element.outerHeight();
 
         // Проверяем, находится ли элемент в видимой области с запасом 50px
-        const isInView = elementBottom > windowTop + 50 && elementTop < windowBottom - 50;
+        const isInView = elementBottom > windowTop + 75 && elementTop < windowBottom - 200;
 
         if (isInView && element.hasClass("pre-hidden")) {
             // Элемент появился в области видимости - анимируем его
