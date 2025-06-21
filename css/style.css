@@ -372,7 +372,7 @@ textarea:focus {
   border-color: rgba(255, 255, 255, 0.8);
 }
 
-/* ========================== Cтилизация checkbox ==================== */
+/* ========================== СТИЛИЗАЦИЯ CHECKBOX ==================== */
 
 .check-label {
   cursor: pointer;
@@ -437,6 +437,8 @@ textarea:focus {
   text-decoration: underline;
 }
 
+/* ========================== СТИЛИЗАЦИЯ ДЛЯ SCTOLL ANIMATIONS ==================== */
+
 .fade-from-left,
 .fade-from-right,
 .fade-from-down,
@@ -466,6 +468,151 @@ textarea:focus {
 .fade-from-up.pre-hidden {
   opacity: 0;
   transform: translateY(-100px);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99998;
+  background-color: rgba(0, 0, 0, 0.3960784314);
+  display: none;
+}
+
+.popup {
+  min-height: fit-content;
+  height: auto;
+  padding: clamp(32px * var(--coefficient), 32 * 100vw / var(--device-width), 32px) clamp(50px * var(--coefficient), 50 * 100vw / var(--device-width), 50px) clamp(32px * var(--coefficient), 32 * 100vw / var(--device-width), 32px) clamp(50px * var(--coefficient), 50 * 100vw / var(--device-width), 50px);
+  border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--device-width), 30px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+  background: rgba(52, 52, 52, 0.17);
+  display: none;
+}
+
+.popup-close {
+  margin-left: auto;
+  width: clamp(48px * var(--coefficient), 48 * 100vw / var(--device-width), 48px);
+  height: clamp(48px * var(--coefficient), 48 * 100vw / var(--device-width), 48px);
+  cursor: pointer;
+  right: clamp(32px * var(--coefficient), 32 * 100vw / var(--device-width), 32px);
+  top: clamp(32px * var(--coefficient), 32 * 100vw / var(--device-width), 32px);
+  border-radius: 100%;
+  border: 1px solid #FFFFFF;
+  flex: none;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.popup-close svg {
+  width: clamp(48px * var(--coefficient), 48 * 100vw / var(--device-width), 48px);
+  height: clamp(48px * var(--coefficient), 48 * 100vw / var(--device-width), 48px);
+}
+
+.popup__header {
+  margin-bottom: clamp(24px * var(--coefficient), 24 * 100vw / var(--device-width), 24px);
+  align-items: flex-start;
+}
+
+.popup__header .col {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(5px * var(--coefficient), 5 * 100vw / var(--device-width), 5px);
+}
+
+.popup__header p {
+  font-size: clamp(22px * var(--coefficient), 22 * 100vw / var(--device-width), 22px);
+  line-height: 130%;
+}
+
+.popup h2 {
+  font-size: clamp(46px * var(--coefficient), 46 * 100vw / var(--device-width), 46px);
+  font-weight: 500;
+}
+
+.popup form .row {
+  gap: clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px);
+  margin-bottom: clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px);
+}
+
+.popup form .row input {
+  flex: 1;
+}
+
+.popup form .row:has(.form__policy) {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px);
+  gap: clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px);
+}
+
+.popup form .row:has(.form__policy) input[type=submit] {
+  margin-left: auto;
+  flex: none;
+}
+
+.popup-social .popup__social {
+  justify-content: center;
+  gap: clamp(47px * var(--coefficient), 47 * 100vw / var(--device-width), 47px);
+}
+
+.popup-social .popup__social .line {
+  width: 4px;
+  height: clamp(200px * var(--coefficient), 200 * 100vw / var(--device-width), 200px);
+  border-radius: clamp(6px * var(--coefficient), 6 * 100vw / var(--device-width), 6px);
+  background-color: #B5FF00;
+}
+
+.popup-social .popup__social > a {
+  width: clamp(200px * var(--coefficient), 200 * 100vw / var(--device-width), 200px);
+  height: clamp(200px * var(--coefficient), 200 * 100vw / var(--device-width), 200px);
+  justify-content: center;
+  flex-direction: column;
+  gap: clamp(24px * var(--coefficient), 24 * 100vw / var(--device-width), 24px);
+  border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--device-width), 30px);
+  padding: clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px) clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px) clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px) clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px);
+  backdrop-filter: blur(10px);
+  background: rgba(52, 52, 52, 0.17);
+}
+
+.popup-social .popup__social > a span {
+  color: #FFFFFF;
+  font-size: clamp(24px * var(--coefficient), 24 * 100vw / var(--device-width), 24px);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.popup-social .popup__social > a svg {
+  width: clamp(64px * var(--coefficient), 64 * 100vw / var(--device-width), 64px);
+  height: clamp(64px * var(--coefficient), 64 * 100vw / var(--device-width), 64px);
+}
+
+.popup-social .popup__social > a svg path {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.popup-social .popup__social img {
+  width: clamp(200px * var(--coefficient), 200 * 100vw / var(--device-width), 200px);
+  height: clamp(200px * var(--coefficient), 200 * 100vw / var(--device-width), 200px);
+  border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--device-width), 30px);
+  border: 1px solid #B5FF00;
 }
 
 .header {
@@ -620,12 +767,16 @@ textarea:focus {
   margin-top: clamp(36px * var(--coefficient), 36 * 100vw / var(--device-width), 36px);
 }
 
-.footer__socials a svg {
+.footer__socials li {
+  cursor: pointer;
+}
+
+.footer__socials li svg {
   width: clamp(70px * var(--coefficient), 70 * 100vw / var(--device-width), 70px);
   height: clamp(70px * var(--coefficient), 70 * 100vw / var(--device-width), 70px);
 }
 
-.footer__socials a svg path {
+.footer__socials li svg path {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -633,24 +784,24 @@ textarea:focus {
   transition: all 0.3s ease 0s;
 }
 
-.footer__socials a:hover svg path {
+.footer__socials li:hover svg path {
   fill: #B5FF00;
 }
 
-.footer ul {
+.footer ul:not(.footer__socials) {
   flex-direction: column;
   gap: clamp(20px * var(--coefficient), 20 * 100vw / var(--device-width), 20px);
   align-items: flex-start;
 }
 
-.footer ul a {
+.footer ul:not(.footer__socials) a {
   font-size: clamp(22px * var(--coefficient), 22 * 100vw / var(--device-width), 22px);
   font-weight: 400;
   color: #FFFFFF;
   position: relative;
 }
 
-.footer ul a::after {
+.footer ul:not(.footer__socials) a::after {
   content: "";
   position: absolute;
   bottom: 1px;
@@ -665,11 +816,11 @@ textarea:focus {
   transition: all 0.3s ease 0s;
 }
 
-.footer ul a:active::after {
+.footer ul:not(.footer__socials) a:active::after {
   width: 100%;
 }
 
-.footer ul a.active {
+.footer ul:not(.footer__socials) a.active {
   font-weight: 700;
 }
 
@@ -864,7 +1015,15 @@ textarea:focus {
   font-weight: 200;
 }
 
-.services__item > a {
+.services__item-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.services__item > a:not(.services__item-link) {
   width: clamp(290px * var(--coefficient), 290 * 100vw / var(--device-width), 290px);
   height: clamp(70px * var(--coefficient), 70 * 100vw / var(--device-width), 70px);
   font-size: clamp(26px * var(--coefficient), 26 * 100vw / var(--device-width), 26px);
@@ -883,7 +1042,7 @@ textarea:focus {
   transition: all 0.3s ease 0s;
 }
 
-.services__item > a:active {
+.services__item > a:not(.services__item-link):active {
   border-color: #B5FF00;
 }
 
@@ -1448,6 +1607,18 @@ textarea:focus {
     border-color: rgba(255, 255, 255, 0.5);
   }
 
+  .popup-close:hover {
+    border-color: #B5FF00;
+  }
+
+  .popup-social .popup__social > a:hover span {
+    color: #B5FF00;
+  }
+
+  .popup-social .popup__social > a:hover svg path {
+    fill: #B5FF00;
+  }
+
   .header ul a:hover::after {
     width: 100%;
   }
@@ -1461,7 +1632,7 @@ textarea:focus {
     color: #B5FF00;
   }
 
-  .footer ul a:hover::after {
+  .footer ul:not(.footer__socials) a:hover::after {
     width: 100%;
   }
 
@@ -1485,7 +1656,7 @@ textarea:focus {
     border-color: #B5FF00;
   }
 
-  .services__item > a:hover {
+  .services__item > a:not(.services__item-link):hover {
     border-color: #B5FF00;
   }
 

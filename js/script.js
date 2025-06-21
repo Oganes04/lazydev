@@ -149,19 +149,19 @@ if (document.querySelectorAll('.reviewsSwiper').length) {
 
 
 //========================== Реализация плавного скролла ====================
-const lenis = new Lenis({
-  autoRaf: true,
-  lerp: 0.1,
-  duration: 1.2,
-  wheelMultiplier: 1,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+// const lenis = new Lenis({
+//   autoRaf: true,
+//   lerp: 0.1,
+//   duration: 1.2,
+//   wheelMultiplier: 1,
+//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   
-  anchors: {
-      offset: 0,
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  }
-});
+//   anchors: {
+//       offset: 0,
+//       duration: 1.2,
+//       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+//   }
+// });
 
 
 //=================== Скролл анимации ============
@@ -181,7 +181,7 @@ function animateOnScroll() {
 }
 
   // При прокрутке
-  $(window).on("scroll", animateOnScroll);
+$(window).on("scroll", animateOnScroll);
 
 
 
@@ -219,3 +219,33 @@ function animateOnScroll() {
 // $(window).on("scroll", animateOnScroll);
 // // Также вызываем при загрузке страницы
 // $(document).ready(animateOnScroll);
+
+
+
+
+//========================== Функционал модальных окон ====================
+
+function openPopup(popup) {
+  $('.popup').fadeOut();
+  $('.overlay').fadeIn();
+  $('html').css('overflow', 'hidden');
+  popup.fadeIn();
+}
+
+function closePopup(closeBtn) {
+  $('.overlay').fadeOut();
+  closeBtn.closest('.popup').fadeOut();
+  $('html').css('overflow-y', 'auto');
+}
+$(document).on('click', '.popup-close', function(e) {
+  closePopup($(this));
+});
+
+$(document).on('click', '.popup-callme-btn', function(e) {
+  openPopup($('.popup-callme'));
+});
+
+
+$(document).on('click', '.popup-social-btn', function(e) {
+  openPopup($('.popup-social'));
+});
