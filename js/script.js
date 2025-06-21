@@ -249,3 +249,7 @@ $(document).on('click', '.popup-callme-btn', function(e) {
 $(document).on('click', '.popup-social-btn', function(e) {
   openPopup($('.popup-social'));
 });
+
+$(document).on('click', '.popup-review-btn', function(e) {
+  openPopup($('.popup-review'));
+});
