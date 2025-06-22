@@ -147,6 +147,22 @@ if (document.querySelectorAll('.reviewsSwiper').length) {
   });
 }
 
+//========================== ФУНКЦИОНАЛ СЛАЙДЕР "УСЛУГИ" ========================
+
+if (document.querySelectorAll('.servicesSwiper').length) {
+  const servicesSwiper = new Swiper(".servicesSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    speed: 600,
+    
+    pagination: {
+      el: ".servicesSwiper-pagination",
+    },
+    
+  });
+}
+
+
 
 //========================== Реализация плавного скролла ====================
 // const lenis = new Lenis({
