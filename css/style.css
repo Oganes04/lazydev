@@ -1091,8 +1091,9 @@ textarea:focus {
   transform: scale(1.03);
 }
 
-.services__item:active > a {
-  border-color: #B5FF00;
+.services__item:active > a:not(.services__item-link) {
+  background-color: #FFFFFF;
+  color: #0D0D0D;
 }
 
 .services__item-icon {
@@ -1169,7 +1170,8 @@ textarea:focus {
 }
 
 .services__item > a:not(.services__item-link):active {
-  border-color: #B5FF00;
+  background-color: #FFFFFF;
+  color: #0D0D0D;
 }
 
 .services__item.large {
@@ -1775,6 +1777,10 @@ textarea:focus {
     line-height: 100%;
   }
 
+  p.section-subtitle {
+    font-size: clamp(15px * var(--coefficient), 15 * 100vw / var(--design-width) * var(--mobile-coefficient), 15px * var(--mobile-coefficient));
+  }
+
   .button-act {
     height: clamp(37px * var(--coefficient), 37 * 100vw / var(--design-width) * var(--mobile-coefficient), 37px * var(--mobile-coefficient));
     font-size: clamp(17px * var(--coefficient), 17 * 100vw / var(--design-width) * var(--mobile-coefficient), 17px * var(--mobile-coefficient));
@@ -1924,7 +1930,7 @@ textarea:focus {
   }
 
   .services {
-    padding-top: clamp(100px * var(--coefficient), 100 * 100vw / var(--design-width) * var(--mobile-coefficient), 100px * var(--mobile-coefficient));
+    padding-top: clamp(125px * var(--coefficient), 125 * 100vw / var(--design-width) * var(--mobile-coefficient), 125px * var(--mobile-coefficient));
     margin-bottom: clamp(150px * var(--coefficient), 150 * 100vw / var(--design-width) * var(--mobile-coefficient), 150px * var(--mobile-coefficient));
   }
 
@@ -2096,8 +2102,14 @@ textarea:focus {
     transition: all 0.3s ease 0s;
   }
 
+  /* ========================== СТИЛИЗАЦИЯ POPUP ОКОН ==================== */
+
   .services .swiper-slide > a:not(.services__item-link):active {
     border-color: #B5FF00;
+  }
+
+  .cases {
+    margin-bottom: clamp(150px * var(--coefficient), 150 * 100vw / var(--design-width) * var(--mobile-coefficient), 150px * var(--mobile-coefficient));
   }
 
   .cases h2.section-header br {
@@ -2199,6 +2211,7 @@ textarea:focus {
 
   .feedback-form {
     height: clamp(730px * var(--coefficient), 730 * 100vw / var(--design-width) * var(--mobile-coefficient), 730px * var(--mobile-coefficient));
+    margin-bottom: clamp(150px * var(--coefficient), 150 * 100vw / var(--design-width) * var(--mobile-coefficient), 150px * var(--mobile-coefficient));
   }
 
   .feedback-form h2 {
@@ -2251,6 +2264,10 @@ textarea:focus {
     height: clamp(17px * var(--coefficient), 17 * 100vw / var(--design-width) * var(--mobile-coefficient), 17px * var(--mobile-coefficient));
   }
 
+  .advantages {
+    margin-bottom: clamp(150px * var(--coefficient), 150 * 100vw / var(--design-width) * var(--mobile-coefficient), 150px * var(--mobile-coefficient));
+  }
+
   .advantages .section-subtitle {
     display: none;
   }
@@ -2297,6 +2314,10 @@ textarea:focus {
     font-weight: 300;
   }
 
+  .lead-magnet {
+    margin-bottom: clamp(150px * var(--coefficient), 150 * 100vw / var(--design-width) * var(--mobile-coefficient), 150px * var(--mobile-coefficient));
+  }
+
   .lead-magnet .container > p {
     font-size: clamp(15px * var(--coefficient), 15 * 100vw / var(--design-width) * var(--mobile-coefficient), 15px * var(--mobile-coefficient));
     margin-bottom: clamp(40px * var(--coefficient), 40 * 100vw / var(--design-width) * var(--mobile-coefficient), 40px * var(--mobile-coefficient));
@@ -2333,6 +2354,10 @@ textarea:focus {
 
   .lead-magnet form button.button-arrow .arrow img {
     height: clamp(17px * var(--coefficient), 17 * 100vw / var(--design-width) * var(--mobile-coefficient), 17px * var(--mobile-coefficient));
+  }
+
+  .reviews {
+    margin-bottom: clamp(150px * var(--coefficient), 150 * 100vw / var(--design-width) * var(--mobile-coefficient), 150px * var(--mobile-coefficient));
   }
 
   .reviews .slider__animation {
@@ -2482,6 +2507,52 @@ textarea:focus {
     gap: clamp(10px * var(--coefficient), 10 * 100vw / var(--design-width) * var(--mobile-coefficient), 10px * var(--mobile-coefficient));
     padding: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient));
   }
+
+  .popup {
+    padding: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
+    width: clamp(350px * var(--coefficient), 350 * 100vw / var(--design-width) * var(--mobile-coefficient), 350px * var(--mobile-coefficient));
+  }
+
+  .popup-close {
+    width: clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient));
+    height: clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient));
+  }
+
+  .popup-close svg {
+    width: clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient));
+    height: clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient));
+  }
+
+  .popup__header p {
+    font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+  }
+
+  .popup h2 {
+    font-size: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
+  }
+
+  .popup form .row {
+    flex-direction: column;
+  }
+
+  .popup form .row:has(.form__policy) input[type=submit] {
+    width: 100%;
+  }
+
+  .popup-callme {
+    max-height: 95vh;
+    min-height: auto;
+    overflow-y: auto;
+  }
+
+  .popup-review .popup__header {
+    gap: clamp(80px * var(--coefficient), 80 * 100vw / var(--design-width) * var(--mobile-coefficient), 80px * var(--mobile-coefficient));
+  }
+
+  .popup-review > p {
+    font-size: clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient));
+    line-height: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
+  }
 }
 
 @media only screen and (max-width: 640px) and (hover: hover) {
@@ -2569,12 +2640,14 @@ textarea:focus {
     transform: scale(1.03);
   }
 
-  .services__item:hover > a {
-    border-color: #B5FF00;
+  .services__item:hover > a:not(.services__item-link) {
+    background-color: #FFFFFF;
+    color: #0D0D0D;
   }
 
   .services__item > a:not(.services__item-link):hover {
-    border-color: #B5FF00;
+    background-color: #FFFFFF;
+    color: #0D0D0D;
   }
 
   .services__item-form-inputs label:hover {
