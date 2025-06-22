@@ -154,7 +154,8 @@ if (document.querySelectorAll('.servicesSwiper').length) {
     slidesPerView: 1,
     spaceBetween: 32,
     speed: 600,
-    
+    loop: true,
+
     pagination: {
       el: ".servicesSwiper-pagination",
     },
