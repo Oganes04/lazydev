@@ -299,7 +299,9 @@ input:not([type=submit]) {
   font-size: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
   line-height: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
   border-radius: clamp(70px * var(--coefficient), 70 * 100vw / var(--design-width) * var(--mobile-coefficient), 70px * var(--mobile-coefficient));
-  backdrop-filter: blur(4.1999998093px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   background: rgba(99, 99, 99, 0.15);
   padding: clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient)) clamp(39px * var(--coefficient), 39 * 100vw / var(--design-width) * var(--mobile-coefficient), 39px * var(--mobile-coefficient)) clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient)) clamp(39px * var(--coefficient), 39 * 100vw / var(--design-width) * var(--mobile-coefficient), 39px * var(--mobile-coefficient));
   width: clamp(320px * var(--coefficient), 320 * 100vw / var(--design-width) * var(--mobile-coefficient), 320px * var(--mobile-coefficient));
@@ -334,7 +336,8 @@ input:not([type=submit]):focus {
 textarea {
   font-size: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
   line-height: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
-  backdrop-filter: blur(4.1999998093px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   background: rgba(99, 99, 99, 0.15);
   border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient));
   border: 1px solid rgba(255, 255, 255, 0.24);
@@ -385,7 +388,9 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   border-radius: clamp(70px * var(--coefficient), 70 * 100vw / var(--design-width) * var(--mobile-coefficient), 70px * var(--mobile-coefficient));
-  backdrop-filter: blur(4.1999998093px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   padding: clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient)) clamp(39px * var(--coefficient), 39 * 100vw / var(--design-width) * var(--mobile-coefficient), 39px * var(--mobile-coefficient)) clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient)) clamp(39px * var(--coefficient), 39 * 100vw / var(--design-width) * var(--mobile-coefficient), 39px * var(--mobile-coefficient));
   border: 1px solid rgba(255, 255, 255, 0.24);
   -webkit-transition: all 0.3s ease 0s;
@@ -500,6 +505,7 @@ textarea:focus {
   z-index: 99999;
   overflow: hidden;
   backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   background: rgba(52, 52, 52, 0.17);
   display: none;
 }
@@ -606,6 +612,7 @@ textarea:focus {
   border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient));
   padding: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background: rgba(52, 52, 52, 0.17);
 }
 
@@ -1287,7 +1294,8 @@ textarea:focus {
   padding: clamp(50px * var(--coefficient), 50 * 100vw / var(--design-width) * var(--mobile-coefficient), 50px * var(--mobile-coefficient)) clamp(50px * var(--coefficient), 50 * 100vw / var(--design-width) * var(--mobile-coefficient), 50px * var(--mobile-coefficient)) clamp(50px * var(--coefficient), 50 * 100vw / var(--design-width) * var(--mobile-coefficient), 50px * var(--mobile-coefficient)) clamp(45px * var(--coefficient), 45 * 100vw / var(--design-width) * var(--mobile-coefficient), 45px * var(--mobile-coefficient));
   border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient));
   border: 1px solid rgba(56, 56, 56, 0.1);
-  backdrop-filter: blur(17.3999996185px);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
   background: rgba(56, 56, 56, 0.27);
   display: flex;
   gap: clamp(80px * var(--coefficient), 80 * 100vw / var(--design-width) * var(--mobile-coefficient), 80px * var(--mobile-coefficient));
@@ -1525,6 +1533,7 @@ textarea:focus {
   padding: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
   min-height: clamp(250px * var(--coefficient), 250 * 100vw / var(--design-width) * var(--mobile-coefficient), 250px * var(--mobile-coefficient));
   backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
   background: rgba(99, 99, 99, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient));
@@ -1635,6 +1644,7 @@ textarea:focus {
   border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient));
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
   background: rgba(99, 99, 99, 0.15);
   width: fit-content;
 }
@@ -1771,7 +1781,7 @@ textarea:focus {
     padding: clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient));
   }
 
-  input:not([type=submit]) {
+  input:not([type=submit]):not([type=checkbox]) {
     font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
     padding: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient)) clamp(39px * var(--coefficient), 39 * 100vw / var(--design-width) * var(--mobile-coefficient), 39px * var(--mobile-coefficient)) clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient)) clamp(39px * var(--coefficient), 39 * 100vw / var(--design-width) * var(--mobile-coefficient), 39px * var(--mobile-coefficient));
     line-height: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
@@ -1839,6 +1849,7 @@ textarea:focus {
     border-radius: clamp(15px * var(--coefficient), 15 * 100vw / var(--design-width) * var(--mobile-coefficient), 15px * var(--mobile-coefficient));
     border: 1px solid rgba(142, 142, 142, 0.4);
     backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
     background: rgba(52, 52, 52, 0.17);
     width: clamp(350px * var(--coefficient), 350 * 100vw / var(--design-width) * var(--mobile-coefficient), 350px * var(--mobile-coefficient));
     z-index: 100;
@@ -2206,7 +2217,7 @@ textarea:focus {
     gap: clamp(14px * var(--coefficient), 14 * 100vw / var(--design-width) * var(--mobile-coefficient), 14px * var(--mobile-coefficient));
   }
 
-  .feedback-form .row input:not([type=submit]) {
+  .feedback-form .row input:not([type=submit]):not([type=checkbox]) {
     font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
     padding: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient)) clamp(39px * var(--coefficient), 39 * 100vw / var(--design-width) * var(--mobile-coefficient), 39px * var(--mobile-coefficient)) clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient)) clamp(39px * var(--coefficient), 39 * 100vw / var(--design-width) * var(--mobile-coefficient), 39px * var(--mobile-coefficient));
     line-height: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
