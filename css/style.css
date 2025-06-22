@@ -2471,10 +2471,6 @@ textarea:focus {
     gap: clamp(10px * var(--coefficient), 10 * 100vw / var(--design-width) * var(--mobile-coefficient), 10px * var(--mobile-coefficient));
     padding: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient));
   }
-
-  .tabbar {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 640px) and (hover: hover) {
