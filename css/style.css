@@ -1910,6 +1910,8 @@ textarea:focus {
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
     background: rgba(52, 52, 52, 0.17);
+    z-index: 100;
+    height: 80vh;
   }
 
   .mobile-menu-close {
@@ -1931,7 +1933,6 @@ textarea:focus {
     align-items: flex-start;
     justify-content: flex-start;
     margin-top: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
-    height: 80vh;
   }
 
   .mobile-menu ul a {
