@@ -270,3 +270,13 @@ $(document).on('click', '.popup-social-btn', function(e) {
 $(document).on('click', '.popup-review-btn', function(e) {
   openPopup($('.popup-review'));
 });
+
+
+$(document).on('click', '.mobile-menu-btn', function(e) {
+  $('.mobile-menu').slideDown();
+});
+
+$(document).on('click', '.mobile-menu-close', function(e) {
+  $('.mobile-menu').slideUp();
+});
+
