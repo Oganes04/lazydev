@@ -407,6 +407,7 @@ textarea:focus {
   display: inline-block;
   cursor: pointer;
   color: #CCCCCC;
+  -webkit-appearance: listbox;
 }
 
 .select select:focus {
@@ -887,6 +888,15 @@ textarea:focus {
 
 .footer__socials li {
   cursor: pointer;
+  position: relative;
+}
+
+.footer__socials li a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .footer__socials li svg {
@@ -902,8 +912,12 @@ textarea:focus {
   transition: all 0.3s ease 0s;
 }
 
-.footer__socials li:hover svg path {
+.footer__socials li:active svg path {
   fill: #B5FF00;
+}
+
+.footer__socials.adaptive {
+  display: none;
 }
 
 .footer ul:not(.footer__socials) {
@@ -2499,6 +2513,15 @@ textarea:focus {
 
   .footer__socials {
     margin-top: clamp(40px * var(--coefficient), 40 * 100vw / var(--design-width) * var(--mobile-coefficient), 40px * var(--mobile-coefficient));
+    display: none;
+  }
+
+  .footer__socials.adaptive {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
   }
 
   .footer__bottom {
@@ -2618,6 +2641,10 @@ textarea:focus {
 
   .footer__inner .col a:not(:has(svg)):hover {
     color: #B5FF00;
+  }
+
+  .footer__socials li:hover svg path {
+    fill: #B5FF00;
   }
 
   .footer ul:not(.footer__socials) a:hover::after {
