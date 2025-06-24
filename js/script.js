@@ -272,13 +272,6 @@ $(document).on('click', '.popup-review-btn', function(e) {
 });
 
 
-// $(document).on('click', '.mobile-menu-btn', function(e) {
-//   $('.mobile-menu').slideDown();
-// });
-
-// $(document).on('click', '.mobile-menu-close', function(e) {
-//   $('.mobile-menu').slideUp();
-// });
 
 
 $(document).on('click', '.mobile-menu-btn', function(e) {
@@ -289,3 +282,41 @@ $(document).on('click', '.mobile-menu-close', function(e) {
   $('.mobile-menu').removeClass('open');
 });
 
+
+
+
+
+
+//========================== БАННЕР COOKIE ====================
+
+$(document).ready(function () {
+  const cookieBanner = $(".accept-cookies");
+  const acceptButton = $(".accept-cookies button");
+
+
+  function checkAcceptCookieState() {
+    return localStorage.getItem("acceptCookie") === "true";
+  }
+
+  function showCookieBanner() {
+    cookieBanner.addClass("show");
+  }
+
+  function hideCookieBanner() {
+    cookieBanner.removeClass("show");
+    setTimeout(() => {
+      cookieBanner.remove(); // Удаляем элемент из DOM после анимации
+    }, 1000);
+  }
+
+  if (checkAcceptCookieState()) {
+    cookieBanner.hide();
+  } else {
+    showCookieBanner();
+  }
+
+  acceptButton.on("click", function () {
+    localStorage.setItem("acceptCookie", "true");
+    hideCookieBanner();
+  });
+});

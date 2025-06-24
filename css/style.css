@@ -668,6 +668,80 @@ textarea:focus {
   /* закругления плашки */
 }
 
+.accept-cookies {
+  position: fixed;
+  right: 0;
+  bottom: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
+  border: 1px solid rgba(142, 142, 142, 0.4);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  background: rgba(52, 52, 52, 0.17);
+  padding: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
+  border-radius: clamp(15px * var(--coefficient), 15 * 100vw / var(--design-width) * var(--mobile-coefficient), 15px * var(--mobile-coefficient));
+  width: clamp(570px * var(--coefficient), 570 * 100vw / var(--design-width) * var(--mobile-coefficient), 570px * var(--mobile-coefficient));
+  transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -webkit-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  -webkit-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  -ms-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.accept-cookies.show {
+  transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.accept-cookies p {
+  font-size: clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient));
+  margin-bottom: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
+}
+
+.accept-cookies a {
+  font-size: clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient));
+  text-decoration: underline;
+  color: #FFFFFF;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.accept-cookies a:active {
+  color: #B5FF00;
+}
+
+.accept-cookies button {
+  height: clamp(37px * var(--coefficient), 37 * 100vw / var(--design-width) * var(--mobile-coefficient), 37px * var(--mobile-coefficient));
+  border-radius: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
+  color: #0D0D0D;
+  background-color: #FFFFFF;
+  padding: clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
+  font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+  font-weight: 500;
+  border: 1px solid #FFFFFF;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.accept-cookies button:active {
+  background-color: #0D0D0D;
+  color: #FFFFFF;
+}
+
 .slider__animation {
   display: flex;
   margin-left: auto;
@@ -1774,10 +1848,6 @@ textarea:focus {
     --design-width: 640;
   }
 
-  section:not(.offer):not(.services):not(.cases):not(.feedback-form):not(.advantages):not(.lead-magnet):not(.reviews) {
-    display: none;
-  }
-
   .container {
     width: 100%;
     padding: clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
@@ -1899,7 +1969,6 @@ textarea:focus {
   }
 
   .mobile-menu {
-    display: block;
     position: absolute;
     width: 100%;
     left: 0;
@@ -1927,6 +1996,12 @@ textarea:focus {
     -webkit-transform: translate(0, 200px) scale(0.9);
     -o-transform: translate(0, 200px) scale(0.9);
     transform: translate(0, 200px) scale(0.9);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
   }
 
   .mobile-menu.open {
@@ -1963,6 +2038,16 @@ textarea:focus {
   .mobile-menu ul a {
     font-size: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
     color: #FFFFFF;
+  }
+
+  .mobile-menu button {
+    margin-top: auto;
+    width: 100%;
+    height: clamp(46px * var(--coefficient), 46 * 100vw / var(--design-width) * var(--mobile-coefficient), 46px * var(--mobile-coefficient));
+    border-radius: clamp(50px * var(--coefficient), 50 * 100vw / var(--design-width) * var(--mobile-coefficient), 50px * var(--mobile-coefficient));
+    font-size: clamp(17px * var(--coefficient), 17 * 100vw / var(--design-width) * var(--mobile-coefficient), 17px * var(--mobile-coefficient));
+    color: #0D0D0D;
+    background-color: #fff;
   }
 
   .offer {
@@ -2648,6 +2733,33 @@ textarea:focus {
     font-size: clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient));
     line-height: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
   }
+
+  .accept-cookies {
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    transform: translate(0, 100%);
+    -moz-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+    -o-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    border-radius: clamp(15px * var(--coefficient), 15 * 100vw / var(--design-width) * var(--mobile-coefficient), 15px * var(--mobile-coefficient)) clamp(15px * var(--coefficient), 15 * 100vw / var(--design-width) * var(--mobile-coefficient), 15px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient));
+  }
+
+  .accept-cookies p {
+    font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+  }
+
+  .accept-cookies a {
+    font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+  }
+
+  .accept-cookies button {
+    font-size: clamp(14px * var(--coefficient), 14 * 100vw / var(--design-width) * var(--mobile-coefficient), 14px * var(--mobile-coefficient));
+    padding: clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient));
+  }
 }
 
 @media only screen and (max-width: 640px) and (hover: hover) {
@@ -2700,6 +2812,15 @@ textarea:focus {
 
   .popup-social .popup__social > a:hover svg path {
     fill: #B5FF00;
+  }
+
+  .accept-cookies a:hover {
+    color: #B5FF00;
+  }
+
+  .accept-cookies button:hover {
+    background-color: #0D0D0D;
+    color: #FFFFFF;
   }
 
   .header ul a:hover::after {
