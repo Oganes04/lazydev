@@ -213,6 +213,16 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s ease 0s;
 }
 
+a.button-act {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 input.button-act {
   background-color: #B5FF00;
 }
@@ -234,6 +244,7 @@ input.button-act {
 .button-arrow span {
   font-size: clamp(26px * var(--coefficient), 26 * 100vw / var(--design-width) * var(--mobile-coefficient), 26px * var(--mobile-coefficient));
   font-weight: 400;
+  color: #FFFFFF;
 }
 
 .button-arrow .arrow {
@@ -479,6 +490,37 @@ textarea:focus {
 }
 
 /* ========================== СТИЛИЗАЦИЯ ДЛЯ SCTOLL ANIMATIONS ==================== */
+
+.fade-from-left,
+.fade-from-right,
+.fade-from-down,
+.fade-from-up {
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+.fade-from-left.pre-hidden {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.fade-from-right.pre-hidden {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.fade-from-down.pre-hidden {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.fade-from-up.pre-hidden {
+  opacity: 0;
+  transform: translateY(-100px);
+}
 
 /* ========================== СТИЛИЗАЦИЯ POPUP ОКОН ==================== */
 
@@ -1848,6 +1890,10 @@ textarea:focus {
     --design-width: 640;
   }
 
+  main {
+    overflow-x: clip;
+  }
+
   .container {
     width: 100%;
     padding: clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
@@ -2685,7 +2731,7 @@ textarea:focus {
     flex-direction: column;
     font-size: clamp(18px * var(--coefficient), 18 * 100vw / var(--design-width) * var(--mobile-coefficient), 18px * var(--mobile-coefficient));
     gap: clamp(10px * var(--coefficient), 10 * 100vw / var(--design-width) * var(--mobile-coefficient), 10px * var(--mobile-coefficient));
-    padding: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient));
+    padding: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(100px * var(--coefficient), 100 * 100vw / var(--design-width) * var(--mobile-coefficient), 100px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient));
   }
 
   .popup {
