@@ -784,6 +784,44 @@ textarea:focus {
   color: #FFFFFF;
 }
 
+.popup-thanks h2 {
+  font-size: clamp(40px * var(--coefficient), 40 * 100vw / var(--design-width) * var(--mobile-coefficient), 40px * var(--mobile-coefficient));
+  margin-bottom: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+  text-align: center;
+}
+
+.popup-thanks p {
+  font-size: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
+  text-align: center;
+  margin-bottom: clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient));
+}
+
+.popup-thanks .button-act {
+  font-size: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
+}
+
+.popup-thanks .button {
+  margin: 0 auto;
+  justify-content: center;
+  width: fit-content;
+  height: clamp(52px * var(--coefficient), 52 * 100vw / var(--design-width) * var(--mobile-coefficient), 52px * var(--mobile-coefficient));
+  border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient));
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: clamp(20px * var(--coefficient), 20 * 100vw / var(--design-width) * var(--mobile-coefficient), 20px * var(--mobile-coefficient));
+  font-weight: 500;
+  padding: clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(23px * var(--coefficient), 23 * 100vw / var(--design-width) * var(--mobile-coefficient), 23px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(23px * var(--coefficient), 23 * 100vw / var(--design-width) * var(--mobile-coefficient), 23px * var(--mobile-coefficient));
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border: 1px solid #FFFFFF;
+}
+
 .slider__animation {
   display: flex;
   margin-left: auto;
@@ -1673,6 +1711,11 @@ textarea:focus {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: clamp(30px * var(--coefficient), 30 * 100vw / var(--design-width) * var(--mobile-coefficient), 30px * var(--mobile-coefficient));
   width: clamp(540px * var(--coefficient), 540 * 100vw / var(--design-width) * var(--mobile-coefficient), 540px * var(--mobile-coefficient));
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .advantages__item-header {
@@ -1684,6 +1727,11 @@ textarea:focus {
 .advantages__item-header img {
   width: clamp(60px * var(--coefficient), 60 * 100vw / var(--design-width) * var(--mobile-coefficient), 60px * var(--mobile-coefficient));
   height: clamp(60px * var(--coefficient), 60 * 100vw / var(--design-width) * var(--mobile-coefficient), 60px * var(--mobile-coefficient));
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .advantages__item h3 {
@@ -2806,6 +2854,29 @@ textarea:focus {
     font-size: clamp(14px * var(--coefficient), 14 * 100vw / var(--design-width) * var(--mobile-coefficient), 14px * var(--mobile-coefficient));
     padding: clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient)) clamp(0px * var(--coefficient), 0 * 100vw / var(--design-width) * var(--mobile-coefficient), 0px * var(--mobile-coefficient)) clamp(32px * var(--coefficient), 32 * 100vw / var(--design-width) * var(--mobile-coefficient), 32px * var(--mobile-coefficient));
   }
+
+  .popup-thanks {
+    padding: clamp(19px * var(--coefficient), 19 * 100vw / var(--design-width) * var(--mobile-coefficient), 19px * var(--mobile-coefficient)) clamp(19px * var(--coefficient), 19 * 100vw / var(--design-width) * var(--mobile-coefficient), 19px * var(--mobile-coefficient)) clamp(19px * var(--coefficient), 19 * 100vw / var(--design-width) * var(--mobile-coefficient), 19px * var(--mobile-coefficient)) clamp(19px * var(--coefficient), 19 * 100vw / var(--design-width) * var(--mobile-coefficient), 19px * var(--mobile-coefficient));
+  }
+
+  .popup-thanks h2 {
+    margin-bottom: clamp(8px * var(--coefficient), 8 * 100vw / var(--design-width) * var(--mobile-coefficient), 8px * var(--mobile-coefficient));
+  }
+
+  .popup-thanks p {
+    font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+    margin-bottom: clamp(24px * var(--coefficient), 24 * 100vw / var(--design-width) * var(--mobile-coefficient), 24px * var(--mobile-coefficient));
+  }
+
+  .popup-thanks .button {
+    height: clamp(37px * var(--coefficient), 37 * 100vw / var(--design-width) * var(--mobile-coefficient), 37px * var(--mobile-coefficient));
+    font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+  }
+
+  .popup-thanks .button-act {
+    font-size: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+    margin-bottom: clamp(16px * var(--coefficient), 16 * 100vw / var(--design-width) * var(--mobile-coefficient), 16px * var(--mobile-coefficient));
+  }
 }
 
 @media only screen and (max-width: 640px) and (hover: hover) {
@@ -2869,6 +2940,11 @@ textarea:focus {
     color: #FFFFFF;
   }
 
+  .popup-thanks .button:hover {
+    background-color: transparent;
+    color: #FFFFFF;
+  }
+
   .header ul a:hover::after {
     width: 100%;
   }
@@ -2928,6 +3004,20 @@ textarea:focus {
     -webkit-box-shadow: 0px 0px 29px 11px rgba(39, 39, 39, 0.5);
     -moz-box-shadow: 0px 0px 29px 11px rgba(39, 39, 39, 0.5);
     box-shadow: 0px 0px 29px 11px rgba(39, 39, 39, 0.5);
+  }
+
+  .advantages__item:hover {
+    -webkit-box-shadow: 0px 0px 29px 11px rgba(39, 39, 39, 0.5);
+    -moz-box-shadow: 0px 0px 29px 11px rgba(39, 39, 39, 0.5);
+    box-shadow: 0px 0px 29px 11px rgba(39, 39, 39, 0.5);
+  }
+
+  .advantages__item:hover .advantages__item-header img {
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   .reviews__navigation-btns svg:hover {

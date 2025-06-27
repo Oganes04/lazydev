@@ -166,19 +166,29 @@ if (document.querySelectorAll('.servicesSwiper').length) {
 
 
 //========================== Реализация плавного скролла ====================
-// const lenis = new Lenis({
-//   autoRaf: true,
-//   lerp: 0.1,
-//   duration: 1.2,
-//   wheelMultiplier: 1,
-//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  
-//   anchors: {
-//       offset: 0,
-//       duration: 1.2,
-//       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-//   }
-// });
+let lenis;
+
+function lenisInit() {
+  lenis = new Lenis({
+    autoRaf: true,
+    lerp: 0.1,
+    duration: 1.2,
+    wheelMultiplier: 1,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    
+    anchors: {
+        offset: 0,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    }
+  });
+
+  return lenis;
+}
+
+$(document).ready(function() {
+  lenisInit();
+});
 
 
 //=================== Скролл анимации ============
@@ -243,6 +253,12 @@ $(window).on("scroll", animateOnScroll);
 //========================== Функционал модальных окон ====================
 
 function openPopup(popup) {
+  // lenis.destroy();
+  if (lenis) {
+    console.log(lenis);
+    lenis.destroy();
+  }
+  console.log(lenis);
   $('.popup').fadeOut();
   $('.overlay').fadeIn();
   $('html').css('overflow', 'hidden');
@@ -250,10 +266,45 @@ function openPopup(popup) {
 }
 
 function closePopup(closeBtn) {
+  // lenis.start();
+  lenisInit();
   $('.overlay').fadeOut();
   closeBtn.closest('.popup').fadeOut();
   $('html').css('overflow-y', 'auto');
 }
+
+$(document).ready(function() {
+  $(document).mouseup(function(e) {
+    var container = $('.popup:visible'); // Проверяем только видимые попапы
+    var popupOpenButtons = $('[data-popup]'); // Все кнопки открытия попапов
+    
+    // Если попап видим И клик был не по нему И не по кнопке открытия
+    if (container.length && 
+        !container.is(e.target) && 
+        container.has(e.target).length === 0 &&
+        !popupOpenButtons.is(e.target) && 
+        popupOpenButtons.has(e.target).length === 0) {
+      
+      lenisInit();
+      container.fadeOut();
+      $('.overlay').fadeOut();
+      $('html').css('overflow-y', 'auto');
+    }
+  });
+
+
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      // lenis.start();
+      lenisInit();
+      $('.popup').fadeOut();
+      $('.overlay').fadeOut();
+      $('html').css('overflow-y', 'auto');
+    }
+  });
+});
+
+
 $(document).on('click', '.popup-close', function(e) {
   closePopup($(this));
 });
@@ -271,6 +322,10 @@ $(document).on('click', '.popup-review-btn', function(e) {
   openPopup($('.popup-review'));
 });
 
+$(document).on('click', '.popup form input[type="submit"]', function(e) {
+  e.preventDefault();
+  openPopup($('.popup-thanks'));
+});
 
 
 
